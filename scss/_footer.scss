@@ -6,7 +6,6 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	font-size: .8rem;
 
 	& > *{
 		@extend %d-flex;
@@ -24,7 +23,15 @@
 		& > p > a{
 			margin: auto 5px;
 			cursor: pointer;
-			text-decoration: none;
+			font-weight: 700;
+			transition: all .3s $bezier;
+			will-change: letter-spacing, opacity;
+			opacity: .6;
+			&:hover{
+				cursor: pointer;
+				letter-spacing: 1.5px;
+				opacity: 1;
+			}
 		}
 	}
 

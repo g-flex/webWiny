@@ -84,31 +84,3 @@ document.onkeydown = function(e) {
 
 $('.previous').addEventListener('click', clickPrevious);
 $('.next').addEventListener('click', clickNext);
-
-
-
-let offset = 0;
-let call;
-function scroll() {
-    if ((offset - document.documentElement.scrollTop) > 15) {
-        document.documentElement.scrollTop += 15
-    }
-    else if ((offset - document.documentElement.scrollTop) < -15) {
-        document.documentElement.scrollTop -= 15
-    }
-    else {
-        clearInterval(call)
-    }
-}
-
-$('.nav__menu ul').addEventListener("click", reply_click);
-
-function reply_click() {
-	event.preventDefault();
-	call = setInterval(scroll, 10);
-	target = event.srcElement.dataset.scroll;
-
-	let roundedOffset = Math.round($('.'+target).offsetTop/10)*10;
-	offset = roundedOffset - 80;
-
-}

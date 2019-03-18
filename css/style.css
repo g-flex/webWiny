@@ -63,7 +63,7 @@
   flex-direction: row;
 }
 
-.la-nostra-app, .cosa-e-winy, .carousel {
+.la-nostra-app, .cosa-e-winy, .carousel, section {
   width: 100vw;
   display: -webkit-flex;
   display: -moz-flex;
@@ -87,6 +87,19 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+}
+
+.hoverable {
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  will-change: letter-spacing, opacity;
+  opacity: 0.6;
+}
+.hoverable:hover {
+  cursor: pointer;
+  letter-spacing: 1.5px;
+  opacity: 1;
 }
 
 .nav {
@@ -118,8 +131,23 @@ body {
   display: inline;
   margin: auto 10px;
 }
-.nav__menu > ul li:hover {
+.nav__menu > ul li > a {
+  margin: auto 5px;
   cursor: pointer;
+  font-weight: 700;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  will-change: letter-spacing, opacity;
+  opacity: 0.6;
+  text-decoration: none;
+  color: white;
+}
+.nav__menu > ul li.current-page, .nav__menu > ul li.current-page > a {
+  opacity: 1;
+}
+.nav__menu > ul li:hover, .nav__menu > ul li > a:hover {
+  cursor: pointer;
+  letter-spacing: 1.5px;
+  opacity: 1;
 }
 
 .carousel {
@@ -229,6 +257,41 @@ body {
   left: 0;
 }
 
+.bando-del-mese {
+  flex-direction: column;
+  position: relative;
+  padding: 0;
+}
+.bando-del-mese > h3 {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.6);
+  top: calc(90vh - 80px);
+  padding: 20px;
+  background-color: #2b0116;
+  z-index: 5;
+  opacity: 1;
+  transform: translateY(-50%);
+}
+.bando-del-mese > h3:hover {
+  color: white;
+}
+.bando-del-mese > .big-img {
+  height: calc(90vh - 80px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+.bando-del-mese > .big-img > img {
+  width: 100%;
+}
+.bando-del-mese > .info-bando {
+  margin-top: calc(10vh);
+  width: 83.3333333333vw;
+}
+
 .footer {
   z-index: 9;
   background-color: #2b0116;
@@ -236,7 +299,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 0.8rem;
 }
 .footer > * {
   color: white;
@@ -252,7 +314,15 @@ body {
 .footer .footer__menu > p > a {
   margin: auto 5px;
   cursor: pointer;
-  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  will-change: letter-spacing, opacity;
+  opacity: 0.6;
+}
+.footer .footer__menu > p > a:hover {
+  cursor: pointer;
+  letter-spacing: 1.5px;
+  opacity: 1;
 }
 .footer .footer__bottom > .social, .footer .footer__bottom .copyright {
   width: 41.6666666667vw;
