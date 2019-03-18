@@ -1,0 +1,77 @@
+.footer{
+	@extend %row;
+	z-index: 9;
+	background-color: $bordeaux;
+	height: 150px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: .8rem;
+
+	& > *{
+		@extend %d-flex;
+		color: white;
+		width: cols(10);
+		justify-content: flex-start;
+		align-items: center;
+		height: 50px;
+	}
+
+	& .footer__menu{
+		border-bottom: 2px solid $red;
+		height: 80px;
+
+		& > p > a{
+			margin: auto 5px;
+			cursor: pointer;
+			text-decoration: none;
+		}
+	}
+
+	& .footer__bottom {
+		
+		& > .social, .copyright{
+			width: cols(5);
+		}
+
+		& > .social{
+			@extend %d-flex;
+			justify-content: flex-end;
+		}
+
+		& > .social > a{
+			cursor: pointer;
+		}
+		& > .social > a:hover{
+			cursor: pointer;
+		}
+		& > .social > a > svg{
+			-webkit-transition: -webkit-transform .3s ease-out;
+			transition: -webkit-transform .3s ease-out;
+			-o-transition: transform .3s ease-out;
+			transition: transform .3s ease-out;
+			transition: transform .3s ease-out, -webkit-transform .3s ease-out;
+			height: 15px;
+			margin: 0 20px;
+		}
+
+		& > .social > a:nth-child(3) > svg{
+			margin-right: 0;
+		}
+
+		& > .social > a:hover > svg{
+			-webkit-transform: scale(1.2);
+				-ms-transform: scale(1.2);
+					transform: scale(1.2);
+			-webkit-transform-origin: center;
+				-ms-transform-origin: center;
+					transform-origin: center; 
+		}
+		& > .social > a > svg > path{
+			fill: white;
+		}
+		& > .social > a:active > svg > path{
+			fill: $red;
+		}
+	}
+}

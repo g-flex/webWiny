@@ -1,0 +1,33 @@
+.nav{
+	@extend %row;
+	z-index: 9;
+	background-color: $bordeaux;
+	height: 80px;
+	justify-content: center;
+	position: sticky;
+	left: 0;
+	top: 0;
+}
+.nav>* {
+	width: cols(5);
+	height: 100%;
+	@extend %d-flex;
+	align-items: center;
+	color: #fff;
+}
+.nav__menu>ul{
+	@extend %d-flex;
+	align-items: center;
+	list-style: none;
+	width: 100%;
+	flex-direction: row;
+	justify-content: flex-end;
+	& li{
+		cursor: pointer;
+		display: inline;
+		margin: auto 10px;
+		&:hover{
+			cursor: pointer;
+		}
+	}
+}

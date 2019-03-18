@@ -1,0 +1,17 @@
+.cosa-e-winy{
+	@extend %section;
+	//background-color: red;
+	//height: 40vh;
+	justify-content: center;
+
+	& >*{
+		width: cols(5);
+		height: 100%;
+		@extend %d-flex;
+		align-items: center;
+		color: #000000;
+	}
+	& >.text{
+		align-items: flex-start;
+	}
+}
