@@ -3,60 +3,100 @@
 	//background-color: brown;
 	//height: 400px;
 	justify-content: center;
-	margin-bottom: 70px;
+	margin-bottom: 0;
+	padding-bottom: 100px;
+	padding-top: 0;
+	background-color: rgba($bordeaux, .5);
 
 	& >*{
-		height: 500px;
+		height: 550px;
 		@extend %d-flex;
 		align-items: center;
-		color: #000000;
 	}
 
 	& > .illustration{
-		width: cols(6);
+		width: cols(7);
+		padding-top: 45px;
+		position: relative;
+
+		& > img{
+			transition: all .5s $bezier .5s;
+			transform: scale(0);
+		}
+
+		& > p{
+			color: white;
+			font-weight: 700;
+			position: absolute;
+			bottom: 0;
+			right: -2000px;
+			transition: all .8s ease-in;
+			height: 150px;
+		}
 	}
 
 	& >.text{
-		width: cols(4);
+		width: cols(3);
 		align-items: flex-start;
 		position: relative;
-		height: 500px;
+		height: 550px;
 
 		& > .steps{
-			padding-top: 20px;
+			padding-top: 10px;
 			width: 100%;
 			display: flex;
 			flex-direction: column;
 			align-items: flex-end;
 
-			& > img{
-				width: 250px;
-				margin: 8px;
+			& > .step{
+				color: white;
+				font-weight: 700;
+				width: 100%;
+				height: 180px;
+				display: flex;
+				flex-direction: row;
+				justify-content: flex-start;
+				align-items: center;
+				margin: 10px 0;
+				//background-color: $red;
+				border-radius: 8px;
+				transition: all .8s $bezier;
+			}
+
+			& > .step > img{
+				height: 150px;
+				transition: all 1s $bezier;
+				margin-left: -2500px;
+			}
+			& > .step > p{
+				margin-left: 5000px;
+				transition: all .8s ease-in;
+				min-width: 300px;
 			}
 		}
 	}
+}
 
-	& > .text > span{
-		@extend %button;
-		position: absolute;
-		bottom: 0;
-		left: 0;
-	}
 
-	& > .text > img{
-		position: absolute;
-		bottom: -80px;
-		height: 40px;
-		right: -60px;
+
+.download-buttons {
+	background-color: rgba($bordeaux, .5);
+	width: 100%;
+	height: 0;
+	margin: 0;
+	@extend %d-flex;
+	flex-direction: row;
+	justify-content: center;
+
+	& > img{
+		margin: 10px;
+		margin-top: -80px;
+		height: 50px;
 		cursor: pointer;
 		transition: transform .3s $bezier, right .8s $bezier;
 
 		&:hover{
 			transform: scale(1.05);
 		}
-	}
-
-	& > .text > img.second-store-button{
-		right: -270px;
 	}
 }

@@ -93,9 +93,19 @@ var isInViewport = function (elem) {
         bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)
     );
 };
-$('.second-store-button').style.right='-1000px';
+let steps = document.querySelectorAll('.step');
+steps.forEach((step)=>{
+	window.addEventListener('scroll', function (event) {
+		if (isInViewport($('.step-1'))) {
+			step.querySelector('p').style.marginLeft='20px';
+			step.querySelector('img').style.marginLeft=0;
+		}
+	}, false);
+});
+
 window.addEventListener('scroll', function (event) {
-	if (isInViewport($('.second-store-button'))) {
-		$('.second-store-button').style='';
+	if (isInViewport($('.step-1'))) {
+		$('.illustration img').style.transform='scale(1)';
+		$('.illustration p').style.right='50px';
 	}
 }, false);

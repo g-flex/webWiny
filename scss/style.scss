@@ -118,6 +118,9 @@ section{
 		color: $red;
 	}
 }
+h2{
+	color: $bordeaux !important;
+}
 
 @import 'nav';
 @import 'carousel';

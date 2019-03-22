@@ -1,4 +1,4 @@
-.footer .footer__bottom > .social, .footer > *, .la-nostra-app > *, .cosa-e-winy > *, .carousel__breadcrumbs, .carousel__window, .nav__menu > ul, .nav > * {
+.footer .footer__bottom > .social, .footer > *, .download-buttons, .la-nostra-app > *, .cosa-e-winy > *, .carousel__breadcrumbs, .carousel__window, .nav__menu > ul, .nav > * {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -26,7 +26,7 @@
   overflow: hidden !important;
 }
 
-.la-nostra-app > .text > span, .carousel__content p span {
+.carousel__content p span {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -35,7 +35,7 @@
   user-select: none;
 }
 
-.la-nostra-app > .text > span, .carousel__content p span {
+.carousel__content p span {
   min-width: 80px;
   background-color: #2b0116;
   padding: 10px;
@@ -45,11 +45,11 @@
   transition: all 0.1s ease-out;
   color: white;
 }
-.la-nostra-app > .text > span:hover, .carousel__content p span:hover {
+.carousel__content p span:hover {
   cursor: pointer;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.4), 0 2px 1px -1px rgba(0, 0, 0, 0.4), 0 1px 2px 0 black;
 }
-.la-nostra-app > .text > span:active, .carousel__content p span:active {
+.carousel__content p span:active {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 4px 2px -1px rgba(0, 0, 0, 0.12), 0 4px 2px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -103,6 +103,10 @@ body {
 }
 .hoverable:active {
   color: #8c1722;
+}
+
+h2 {
+  color: #2b0116 !important;
 }
 
 .nav {
@@ -246,51 +250,87 @@ body {
 
 .la-nostra-app {
   justify-content: center;
-  margin-bottom: 70px;
+  margin-bottom: 0;
+  padding-bottom: 100px;
+  padding-top: 0;
+  background-color: rgba(43, 1, 22, 0.5);
 }
 .la-nostra-app > * {
-  height: 500px;
+  height: 550px;
   align-items: center;
-  color: #000000;
 }
 .la-nostra-app > .illustration {
-  width: 50vw;
+  width: 58.3333333333vw;
+  padding-top: 45px;
+  position: relative;
+}
+.la-nostra-app > .illustration > img {
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s;
+  transform: scale(0);
+}
+.la-nostra-app > .illustration > p {
+  color: white;
+  font-weight: 700;
+  position: absolute;
+  bottom: 0;
+  right: -2000px;
+  transition: all 0.8s ease-in;
+  height: 150px;
 }
 .la-nostra-app > .text {
-  width: 33.3333333333vw;
+  width: 25vw;
   align-items: flex-start;
   position: relative;
-  height: 500px;
+  height: 550px;
 }
 .la-nostra-app > .text > .steps {
-  padding-top: 20px;
+  padding-top: 10px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
-.la-nostra-app > .text > .steps > img {
-  width: 250px;
-  margin: 8px;
+.la-nostra-app > .text > .steps > .step {
+  color: white;
+  font-weight: 700;
+  width: 100%;
+  height: 180px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10px 0;
+  border-radius: 8px;
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
-.la-nostra-app > .text > span {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+.la-nostra-app > .text > .steps > .step > img {
+  height: 150px;
+  transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  margin-left: -2500px;
 }
-.la-nostra-app > .text > img {
-  position: absolute;
-  bottom: -80px;
-  height: 40px;
-  right: -60px;
+.la-nostra-app > .text > .steps > .step > p {
+  margin-left: 5000px;
+  transition: all 0.8s ease-in;
+  min-width: 300px;
+}
+
+.download-buttons {
+  background-color: rgba(43, 1, 22, 0.5);
+  width: 100%;
+  height: 0;
+  margin: 0;
+  flex-direction: row;
+  justify-content: center;
+}
+.download-buttons > img {
+  margin: 10px;
+  margin-top: -80px;
+  height: 50px;
   cursor: pointer;
   transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55), right 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
-.la-nostra-app > .text > img:hover {
+.download-buttons > img:hover {
   transform: scale(1.05);
-}
-.la-nostra-app > .text > img.second-store-button {
-  right: -270px;
 }
 
 .bando-del-mese {
@@ -382,7 +422,7 @@ body {
   transition: transform 0.3s ease-out;
   transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
   height: 15px;
-  margin: 0 20px;
+  margin: 0 10px;
 }
 .footer .footer__bottom > .social > a:nth-child(3) > svg {
   margin-right: 0;
