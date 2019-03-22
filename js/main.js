@@ -84,3 +84,18 @@ document.onkeydown = function(e) {
 
 $('.previous').addEventListener('click', clickPrevious);
 $('.next').addEventListener('click', clickNext);
+
+
+var isInViewport = function (elem) {
+    var bounding = elem.getBoundingClientRect();
+    return (
+        bounding.top >= 0 &&
+        bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+    );
+};
+$('.second-store-button').style.right='-1000px';
+window.addEventListener('scroll', function (event) {
+	if (isInViewport($('.second-store-button'))) {
+		$('.second-store-button').style='';
+	}
+}, false);

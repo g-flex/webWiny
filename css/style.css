@@ -235,7 +235,7 @@ body {
   justify-content: center;
 }
 .cosa-e-winy > * {
-  width: 41.6666666667vw;
+  width: 83.3333333333vw;
   height: 100%;
   align-items: center;
   color: #000000;
@@ -246,21 +246,51 @@ body {
 
 .la-nostra-app {
   justify-content: center;
+  margin-bottom: 70px;
 }
 .la-nostra-app > * {
-  width: 41.6666666667vw;
-  height: 400px;
+  height: 500px;
   align-items: center;
   color: #000000;
 }
+.la-nostra-app > .illustration {
+  width: 50vw;
+}
 .la-nostra-app > .text {
+  width: 33.3333333333vw;
   align-items: flex-start;
   position: relative;
+  height: 500px;
+}
+.la-nostra-app > .text > .steps {
+  padding-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.la-nostra-app > .text > .steps > img {
+  width: 250px;
+  margin: 8px;
 }
 .la-nostra-app > .text > span {
   position: absolute;
   bottom: 0;
   left: 0;
+}
+.la-nostra-app > .text > img {
+  position: absolute;
+  bottom: -80px;
+  height: 40px;
+  right: -60px;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55), right 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.la-nostra-app > .text > img:hover {
+  transform: scale(1.05);
+}
+.la-nostra-app > .text > img.second-store-button {
+  right: -270px;
 }
 
 .bando-del-mese {
