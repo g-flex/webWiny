@@ -59,6 +59,7 @@
 		padding: 20px 0;
 		width: cols(10);
 		min-height: 80px;
+		transition: all .5s $bezier;
 
 		& > p > b{
 			color: $red;

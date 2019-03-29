@@ -1,0 +1,14 @@
+.banner{
+	@extend %section;
+	height: calc(100vh - 80px);
+	overflow: hidden;
+	position: relative;
+	padding: 0;
+
+	& > video{
+		position: absolute;
+		width: 100%;
+		left: 0;
+		top: 0;
+	}
+}

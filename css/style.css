@@ -1,4 +1,4 @@
-.footer .footer__bottom > .social, .footer > *, .bandi-passati > .vincitori > .vincitore, .bandi-passati > .vincitori, .download-buttons, .la-nostra-app > *, .cosa-e-winy > *, .carousel__breadcrumbs, .carousel__window, .nav__menu > ul, .nav > * {
+.footer .footer__bottom > .social, .footer > *, .bandi-passati > .vincitori > .vincitore, .bandi-passati > .vincitori, .download-buttons, .la-nostra-app > *, .cosa-e-winy > *, .nav__menu > ul, .nav > * {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -26,7 +26,7 @@
   overflow: hidden !important;
 }
 
-.bando-del-mese > .info-bando-3 > span, .carousel__content p span {
+.bando-del-mese > .info-bando-3 > span {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -35,7 +35,7 @@
   user-select: none;
 }
 
-.bando-del-mese > .info-bando-3 > span, .carousel__content p span {
+.bando-del-mese > .info-bando-3 > span {
   min-width: 80px;
   background-color: #2b0116;
   padding: 10px;
@@ -45,11 +45,11 @@
   transition: all 0.1s ease-out;
   color: white;
 }
-.bando-del-mese > .info-bando-3 > span:hover, .carousel__content p span:hover {
+.bando-del-mese > .info-bando-3 > span:hover {
   cursor: pointer;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.4), 0 2px 1px -1px rgba(0, 0, 0, 0.4), 0 1px 2px 0 black;
 }
-.bando-del-mese > .info-bando-3 > span:active, .carousel__content p span:active {
+.bando-del-mese > .info-bando-3 > span:active {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 4px 2px -1px rgba(0, 0, 0, 0.12), 0 4px 2px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -63,7 +63,7 @@
   flex-direction: row;
 }
 
-.bandi-passati, .la-nostra-app, .cosa-e-winy, .carousel, section {
+.bandi-passati, .la-nostra-app, .cosa-e-winy, .banner, section {
   width: 100vw;
   display: -webkit-flex;
   display: -moz-flex;
@@ -107,6 +107,11 @@ body {
 
 h2 {
   color: #2b0116 !important;
+}
+
+.margin-opacity-out {
+  margin-left: 3000px !important;
+  opacity: 0 !important;
 }
 
 .nav {
@@ -160,79 +165,17 @@ h2 {
   color: #8c1722;
 }
 
-.carousel {
+.banner {
   height: calc(100vh - 80px);
   overflow: hidden;
   position: relative;
   padding: 0;
 }
-.carousel > svg {
+.banner > video {
   position: absolute;
-  height: 50px;
-  cursor: pointer;
-  transition: height 0.3s ease;
-  z-index: 5;
-}
-.carousel > svg:active {
-  height: 60px;
-}
-.carousel > svg:nth-of-type(2) {
-  transform: rotate(180deg);
-  right: 1rem;
-}
-.carousel > svg > path {
-  d: path("M213.13,222.409L351.88,83.653c7.05-7.043,10.567-15.657,10.567-25.841c0-10.183-3.518-18.793-10.567-25.835 l-21.409-21.416C323.432,3.521,314.817,0,304.637,0s-18.791,3.521-25.841,10.561L92.649,196.425 c-7.044,7.043-10.566,15.656-10.566,25.841s3.521,18.791,10.566,25.837l186.146,185.864c7.05,7.043,15.66,10.564,25.841,10.564 s18.795-3.521,25.834-10.564l21.409-21.412c7.05-7.039,10.567-15.604,10.567-25.697c0-10.085-3.518-18.746-10.567-25.978 L213.13,222.409z");
-  cursor: pointer;
-  fill: rgba(43, 1, 22, 0.6);
-}
-.carousel > svg > path:hover {
-  cursor: pointer;
-  fill: rgba(43, 1, 22, 0.8);
-}
-
-.carousel__window {
-  width: 300vw;
-  height: 100%;
-  flex-direction: row;
-  position: absolute;
-  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  width: 100%;
   left: 0;
-}
-
-.carousel__content {
-  width: 100vw;
-  height: 100%;
-  display: inline;
-  position: relative;
-}
-.carousel__content p {
-  position: absolute;
-  top: 50vh;
-  left: 50vw;
-}
-.carousel__breadcrumbs {
-  position: absolute;
-  bottom: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  align-items: center;
-  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-.carousel__breadcrumbs:hover {
-  transform: translateX(-50%) scale(1.2);
-}
-.carousel__breadcrumbs .crumb {
-  cursor: pointer;
-  width: 20px;
-  margin: 10px;
-  height: 5px;
-  border-radius: 4px;
-  background-color: rgba(43, 1, 22, 0.6);
-}
-.carousel__breadcrumbs .crumb:hover {
-  cursor: pointer;
-  background-color: rgba(43, 1, 22, 0.8);
+  top: 0;
 }
 
 .cosa-e-winy {
@@ -388,6 +331,7 @@ h2 {
   padding: 20px 0;
   width: 83.3333333333vw;
   min-height: 80px;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 .bando-del-mese > .info-bando > p > b {
   color: #8c1722;

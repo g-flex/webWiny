@@ -121,9 +121,13 @@ section{
 h2{
 	color: $bordeaux !important;
 }
+.margin-opacity-out{
+	margin-left: 3000px !important;
+	opacity: 0 !important;
+}
 
 @import 'nav';
-@import 'carousel';
+@import 'banner';
 @import 'cosa-e-winy';
 @import 'la-nostra-app';
 @import 'bandi-del-mese';
