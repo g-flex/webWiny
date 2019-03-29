@@ -180,6 +180,7 @@ h2 {
 
 .cosa-e-winy {
   justify-content: center;
+  text-align-last: left;
 }
 .cosa-e-winy > * {
   width: 83.3333333333vw;
@@ -188,11 +189,11 @@ h2 {
   color: #000000;
 }
 .cosa-e-winy > .text {
-  padding: 20px auto;
+  padding: 20px 0;
   align-items: flex-start;
 }
 .cosa-e-winy > .text > * {
-  margin: 20px auto;
+  margin: 20px 0;
 }
 
 .la-nostra-app {
