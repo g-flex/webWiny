@@ -12,6 +12,10 @@
 		color: #000000;
 	}
 	& >.text{
+		padding: 20px auto;
 		align-items: flex-start;
+		& > *{
+			margin: 20px auto;
+		}
 	}
 }

@@ -188,7 +188,11 @@ h2 {
   color: #000000;
 }
 .cosa-e-winy > .text {
+  padding: 20px auto;
   align-items: flex-start;
+}
+.cosa-e-winy > .text > * {
+  margin: 20px auto;
 }
 
 .la-nostra-app {
