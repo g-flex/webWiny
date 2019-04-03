@@ -1,21 +1,31 @@
 .cosa-e-winy{
 	@extend %section;
-	//background-color: red;
-	//height: 40vh;
+	background-color: #fff;
 	justify-content: center;
 	text-align-last: left;
 
 	& >*{
-		width: cols(10);
 		height: 100%;
 		@extend %d-flex;
 		align-items: center;
 		color: #000000;
 	}
+	
+	& > .empty-col{
+		width: cols(1);
+	}
+
+	& > .illustration{
+		width: cols(3);
+	}
+
 	& >.text{
+		width: cols(6);
 		padding: 20px 0;
 		align-items: flex-start;
 		& > *{
+			width: 100%;
+			font-size: 20px;
 			margin: 20px 0;
 		}
 	}

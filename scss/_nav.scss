@@ -9,11 +9,16 @@
 	top: 0;
 }
 .nav>* {
-	width: cols(5);
 	height: 100%;
 	@extend %d-flex;
 	align-items: center;
 	color: #fff;
+}
+.nav__logo{
+	width: cols(3);
+}
+.nav__menu{
+	width: cols(7);
 }
 .nav__menu>ul{
 	@extend %d-flex;
