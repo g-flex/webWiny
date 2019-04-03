@@ -105,6 +105,10 @@ body {
   color: #8c1722;
 }
 
+h2 {
+  color: #2b0116 !important;
+}
+
 .margin-opacity-out {
   margin-left: 3000px !important;
   opacity: 0 !important;
