@@ -22,6 +22,8 @@
 		height: 80px;
 
 		& > p > a{
+			text-decoration: none;
+			color: white;
 			margin: auto 5px;
 			cursor: pointer;
 			font-weight: 700;

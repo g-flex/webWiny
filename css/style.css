@@ -13,7 +13,7 @@
   font-weight: 100;
   src: url("../fonts/F37Ginger-Thin.otf");
 }
-.footer .footer__bottom > .social, .footer > *, .etichette-vincitrici > .row > *, section.chi-sei > *:not(.divider), .cosa-e-winy > .download, .cosa-e-winy > .description, .nav__menu > ul, .nav > * {
+.footer .footer__bottom > .social, .footer > *, .team > .row > *, .etichette-vincitrici > .row > *, section.chi-sei > *:not(.divider), .cosa-e-winy > .download, .cosa-e-winy > .description, .nav__menu > ul, .nav > * {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -68,7 +68,7 @@
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 4px 2px -1px rgba(0, 0, 0, 0.12), 0 4px 2px 0 rgba(0, 0, 0, 0.2);
 }
 
-.footer, .etichette-vincitrici > .row, .nav {
+.footer, .team > .row, .etichette-vincitrici > .row, .nav {
   width: 100%;
   display: -webkit-flex;
   display: -moz-flex;
@@ -476,6 +476,48 @@ section.chi-sei > .divider {
   font-size: 21px;
 }
 
+.team {
+  flex-direction: column;
+  align-items: center;
+}
+.team > .row {
+  align-items: center;
+  justify-content: space-evenly;
+  height: 200px;
+  padding: 20px 0;
+  margin: 20px 0;
+  width: 100vw;
+}
+.team > .row > * {
+  width: 25vw;
+  height: 100%;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.team > .row > * > h4 {
+  color: black;
+  font-size: 27px;
+  font-weight: 700;
+}
+.team > .row > * > span {
+  font-size: 24px;
+  font-weight: 400;
+}
+.team > .row > * > p {
+  font-size: 16px;
+  white-space: nowrap;
+}
+.team > .row > * > p > b {
+  font-size: 21px;
+}
+.team > .row > * > .red-divider {
+  width: 100%;
+  height: 2px;
+  background-color: #8c1722;
+}
+
 .footer {
   z-index: 9;
   background-color: #2b0116;
@@ -497,6 +539,8 @@ section.chi-sei > .divider {
   height: 80px;
 }
 .footer .footer__menu > p > a {
+  text-decoration: none;
+  color: white;
   margin: auto 5px;
   cursor: pointer;
   font-weight: 700;
