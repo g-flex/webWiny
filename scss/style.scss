@@ -1,5 +1,6 @@
 $bordeaux: #2b0116;
 $red: #8c1722;
+$pink: #F7E4EA;
 $font: F37 Ginger, sans-serif;
 $col: calc(100vw / 12);
 $bezier: cubic-bezier(0.680, -0.550, 0.265, 1.550);
@@ -7,12 +8,18 @@ $bezier: cubic-bezier(0.680, -0.550, 0.265, 1.550);
 
 @font-face {
 	font-family: 'F37 Ginger';
+    font-weight: 400;
 	src: url('../fonts/F37Ginger-Light.otf');
 }
 @font-face {
 	font-family: 'F37 Ginger';
-    font-weight: bold;
+    font-weight: 700;
 	src: url('../fonts/F37Ginger_Regular.otf');
+}
+@font-face {
+	font-family: 'F37 Ginger';
+    font-weight: 100;
+	src: url('../fonts/F37Ginger-Thin.otf');
 }
 
 @function cols($num, $width: 100vw){
@@ -98,7 +105,7 @@ $bezier: cubic-bezier(0.680, -0.550, 0.265, 1.550);
 
 body{
 	font-family: $font;
-	font-size: 25px;
+	font-size: 21px;
 	background-color: #fff;
 	color: #000000;
 	width: 100vw;
@@ -127,8 +134,13 @@ section{
 		background-color: transparent;
 	}
 }
+.hoverable-tick{
+	font-weight: normal;
+	position: relative;
+	opacity: .9;
+}
 h2{
-	font-size: 35px;
+	font-size: 45px;
 	color: $bordeaux !important;
 }
 .margin-opacity-out{
@@ -140,7 +152,7 @@ u.button-tick{
 	text-decoration: none;
 	position: absolute;
 	bottom: -1px;
-	font-size: 25px;
+	font-size: 21px;
 }
 
 @import 'nav';
@@ -149,4 +161,5 @@ u.button-tick{
 @import 'ultima-vincitrice';
 @import 'bandi-del-mese';
 @import 'bandi-passati';
+@import 'chi-sei';
 @import 'footer';

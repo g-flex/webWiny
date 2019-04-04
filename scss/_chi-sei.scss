@@ -1,0 +1,24 @@
+section.chi-sei{
+	background-color: $pink;
+	height: 580px;
+	flex-direction: row;
+	justify-content: center;
+	margin-bottom: 50px;
+	padding: 0;
+
+	& > *:not(.divider){
+		height: 100%;
+		@extend %d-flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-evenly;
+		width: cols(5);
+	}
+
+	& > .divider{
+		height: 480px;
+		width: 2px;
+		background-color: $red;
+	}
+
+}

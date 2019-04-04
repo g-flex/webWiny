@@ -23,16 +23,13 @@
 
 	& > .description > .text{
 		width: cols(6);
-		padding: 20px 60px 20px 0;
+		padding: 20px 0;
 		text-align: left;
 		align-items: flex-start;
 		& > *{
 			width: 100%;
 			margin: 35px 0;
 			line-height: 30px;
-		}
-		& > h2{
-			font-size: 50px;
 		}
 	}
 	& > p{
@@ -48,6 +45,10 @@
 		justify-content: center;
 		margin: 20px 0;
 
+		& > .big-icon{
+			padding-right: 25px;
+		}
+
 		& > .buttons img{
 			margin: 10px;
 			width: 145px;
@@ -58,6 +59,9 @@
 				transform: scale(1.05);
 			}
 		}
+	}
+	& > .download-teaser{
+		font-size: 25px;
 	}
 }
 
