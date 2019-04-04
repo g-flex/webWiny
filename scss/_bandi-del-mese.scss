@@ -46,6 +46,7 @@
 	}
 	& > .info-bando-1{
 		margin-top: calc(10vh);
+		padding-top: 0 !important;
 		
 		&>h3{
 			color: $bordeaux;
@@ -89,7 +90,7 @@
 	}
 
 	& > .info-bando{
-		padding: 20px 0;
+		padding: 30px 0;
 		width: cols(10);
 		min-height: 100px;
 		transition: all .5s $bezier;

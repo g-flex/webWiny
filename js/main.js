@@ -34,3 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	console.log('loaded');
 	$('#banner').play();
 });
+
+$('.ultima-vincitrice > span').addEventListener('click', function(){
+    window.location.replace('etichette.html');
+});
