@@ -13,7 +13,7 @@
   font-weight: 100;
   src: url("../fonts/F37Ginger-Thin.otf");
 }
-.footer .footer__bottom > .social, .footer > *, section.chi-sei > *:not(.divider), .bandi-passati > .vincitori > .vincitore, .bandi-passati > .vincitori, .cosa-e-winy > .download, .cosa-e-winy > .description, .nav__menu > ul, .nav > * {
+.footer .footer__bottom > .social, .footer > *, section.chi-sei > *:not(.divider), .cosa-e-winy > .download, .cosa-e-winy > .description, .nav__menu > ul, .nav > * {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -78,7 +78,7 @@
   flex-direction: row;
 }
 
-.bandi-passati, .cosa-e-winy, .banner, section {
+.cosa-e-winy, .banner, section {
   width: 100vw;
   display: -webkit-flex;
   display: -moz-flex;
@@ -97,6 +97,9 @@ body {
   color: #000000;
   width: 100vw;
   overflow-x: hidden;
+}
+body p {
+  line-height: 30px;
 }
 
 .hoverable {
@@ -353,12 +356,11 @@ u.button-tick {
 }
 .bando-del-mese > .info-bando-1 > h3 {
   color: #2b0116;
-  font-size: 1.5rem;
+  font-size: 40px;
   font-weight: 700;
   margin-bottom: 20px;
 }
 .bando-del-mese > .info-bando-3 {
-  border-bottom: 2px solid #8c1722;
   position: relative;
   min-height: 200px !important;
 }
@@ -371,24 +373,32 @@ u.button-tick {
   bottom: 50px;
   padding: 15px;
   padding-right: 20px;
-  width: 350px;
+  width: 300px;
   font-weight: normal;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55), color 0s;
+}
+.bando-del-mese > .info-bando-3 > span:hover {
+  transform: translateX(50%) scale(1.1);
+}
+.bando-del-mese > .info-bando-3 > span:hover > u {
+  right: 40px;
 }
 .bando-del-mese > .info-bando-3 > span > u {
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   right: 50px;
   bottom: 14px;
 }
 .bando-del-mese > .info-bando {
   padding: 20px 0;
   width: 83.3333333333vw;
-  min-height: 80px;
+  min-height: 100px;
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 .bando-del-mese > .info-bando > p > b {
   color: #8c1722;
 }
 .bando-del-mese > .info-bando > h4 {
-  font-size: 1.1rem;
+  font-size: 25px;
   color: #2b0116;
   font-weight: 700;
   margin-bottom: 10px;
@@ -396,50 +406,6 @@ u.button-tick {
 
 .bando-del-mese-home {
   padding: 20px 0 80px 0;
-}
-
-.bandi-passati {
-  flex-direction: column;
-  align-items: center;
-}
-.bandi-passati > h3 {
-  color: #2b0116;
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-.bandi-passati > .vincitori {
-  width: 83.3333333333vw;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 20px 0;
-}
-.bandi-passati > .vincitori > .vincitore {
-  border: 1px solid #2b0116;
-  width: 220px;
-  height: 434px;
-  padding: 0;
-  padding-top: 10px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  cursor: pointer;
-}
-.bandi-passati > .vincitori > .vincitore > .vincitore-description {
-  margin-top: 10px;
-  background-color: rgba(43, 1, 22, 0.5);
-}
-.bandi-passati > .vincitori > .vincitore > .vincitore-description > p {
-  color: rgba(255, 255, 255, 0.5);
-  width: 80%;
-  margin: 10px auto;
-}
-.bandi-passati > .vincitori > .vincitore > .vincitore-description > p > b {
-  color: white;
-}
-.bandi-passati > .vincitori > .vincitore * {
-  cursor: pointer;
 }
 
 section.chi-sei {

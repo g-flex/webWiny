@@ -110,6 +110,10 @@ body{
 	color: #000000;
 	width: 100vw;
 	overflow-x: hidden;
+
+	& p {
+		line-height: 30px;
+	}
 }
 
 section{
@@ -160,6 +164,5 @@ u.button-tick{
 @import 'cosa-e-winy';
 @import 'ultima-vincitrice';
 @import 'bandi-del-mese';
-@import 'bandi-passati';
 @import 'chi-sei';
 @import 'footer';

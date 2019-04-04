@@ -1,6 +1,6 @@
 const $ = (selector) => document.querySelector(selector);
 
-let offsetCosa = 500;
+let offsetCosa = 700;
 let call;
 function scroll(offset) {
     if ((offset - document.documentElement.scrollTop) > 20) {
@@ -29,10 +29,29 @@ var isInViewport = function (elem) {
         bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)
     );
 };
+
+function appearInfos(){
+    document.querySelectorAll('.info-bando').forEach((info)=>{
+        info.classList.remove('margin-opacity-out');
+    });
+}
+
 window.addEventListener('scroll', function (event) {
-	if (isInViewport($('.info-bando-1>h3'))) {
-		document.querySelectorAll('.info-bando').forEach((info)=>{
-			info.classList.remove('margin-opacity-out');
-		});
+	if (isInViewport($('.info-bando-1>h3')) || isInViewport($('.info-bando-3'))) {
+		appearInfos();
 	}
 }, false);
+
+if (isInViewport($('.info-bando-1>h3')) || isInViewport($('.info-bando-3'))) {
+    appearInfos();
+}
+
+if(window.location.hash=='#contest') {
+    appearInfos();
+}
+
+window.onhashchange = function(){
+    if(window.location.hash=='#contest') {
+        appearInfos();
+    }
+}

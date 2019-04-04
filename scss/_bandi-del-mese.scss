@@ -49,14 +49,13 @@
 		
 		&>h3{
 			color: $bordeaux;
-			font-size: 1.5rem;
+			font-size: 40px;
 			font-weight: 700;
 			margin-bottom: 20px;
 		}
 	}
 
 	& > .info-bando-3{
-		border-bottom: 2px solid $red;
 		position: relative;
 		min-height: 200px !important;
 
@@ -70,9 +69,19 @@
 			bottom: 50px;
 			padding: 15px;
 			padding-right: 20px;
-			width: 350px;
+			width: 300px;
 			font-weight: normal;
+			transition: all .3s $bezier, color 0s;
+
+			&:hover{
+				transform: translateX(50%) scale(1.1);
+				& > u{
+					right: 40px;
+				}
+			}
+
 			& > u{
+				transition: all .3s $bezier;
 				right: 50px;
 				bottom: 14px;
 			}
@@ -82,7 +91,7 @@
 	& > .info-bando{
 		padding: 20px 0;
 		width: cols(10);
-		min-height: 80px;
+		min-height: 100px;
 		transition: all .5s $bezier;
 
 		& > p > b{
@@ -90,7 +99,7 @@
 		}
 
 		& > h4 {
-			font-size: 1.1rem;
+			font-size: 25px;
 			color: $bordeaux;
 			font-weight: 700;
 			margin-bottom: 10px;
