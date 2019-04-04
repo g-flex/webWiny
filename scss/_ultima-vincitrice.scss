@@ -1,0 +1,18 @@
+.ultima-vincitrice{
+	position: relative;
+	& > img {
+		width: 100vw;
+	}
+	& > h2, span{
+		width: 100vw;
+		position: absolute;
+		text-align: center;
+		left: 0;
+	}
+	& > h2 {
+		top: 100px;
+	}
+	& > span {
+		bottom: 80px;
+	}
+}

@@ -1,9 +1,19 @@
 $bordeaux: #2b0116;
 $red: #8c1722;
-$font: sans-serif;
+$font: F37 Ginger, sans-serif;
 $col: calc(100vw / 12);
 $bezier: cubic-bezier(0.680, -0.550, 0.265, 1.550);
 
+
+@font-face {
+	font-family: 'F37 Ginger';
+	src: url('../fonts/F37Ginger-Light.otf');
+}
+@font-face {
+	font-family: 'F37 Ginger';
+    font-weight: bold;
+	src: url('../fonts/F37Ginger_Regular.otf');
+}
 
 @function cols($num, $width: 100vw){
 	@return $width / 12 * $num;
@@ -88,7 +98,8 @@ $bezier: cubic-bezier(0.680, -0.550, 0.265, 1.550);
 
 body{
 	font-family: $font;
-	background-color: rgba($bordeaux, .5);
+	font-size: 25px;
+	background-color: #fff;
 	color: #000000;
 	width: 100vw;
 	overflow-x: hidden;
@@ -98,11 +109,6 @@ section{
 	@extend %section;
 }
 
-.text, .illustration{
-	flex-direction: column;
-	align-items: flex-start;
-	justify-content: flex-start;
-}
 .hoverable{
 	cursor: pointer;
 	font-weight: 700;
@@ -117,19 +123,30 @@ section{
 	&:active{
 		color: $red;
 	}
+	&::selection {
+		background-color: transparent;
+	}
 }
 h2{
+	font-size: 35px;
 	color: $bordeaux !important;
 }
 .margin-opacity-out{
 	margin-left: 3000px !important;
 	opacity: 0 !important;
 }
+u.button-tick{
+	margin-left: 10px;
+	text-decoration: none;
+	position: absolute;
+	bottom: -1px;
+	font-size: 25px;
+}
 
 @import 'nav';
 @import 'banner';
 @import 'cosa-e-winy';
-@import 'la-nostra-app';
+@import 'ultima-vincitrice';
 @import 'bandi-del-mese';
 @import 'bandi-passati';
 @import 'footer';

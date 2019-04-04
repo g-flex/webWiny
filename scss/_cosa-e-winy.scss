@@ -2,31 +2,67 @@
 	@extend %section;
 	background-color: #fff;
 	justify-content: center;
-	text-align-last: left;
+	flex-direction: column;
 
-	& >*{
+	& > .description{
 		height: 100%;
 		@extend %d-flex;
 		align-items: center;
+		flex-direction: row;
 		color: #000000;
+		width: cols(10);
 	}
 	
-	& > .empty-col{
+	& > .description > .empty-col{
 		width: cols(1);
 	}
 
-	& > .illustration{
+	& > .description > .illustration{
 		width: cols(3);
 	}
 
-	& >.text{
+	& > .description > .text{
 		width: cols(6);
-		padding: 20px 0;
+		padding: 20px 60px 20px 0;
+		text-align: left;
 		align-items: flex-start;
 		& > *{
 			width: 100%;
-			font-size: 20px;
-			margin: 20px 0;
+			margin: 35px 0;
+			line-height: 30px;
+		}
+		& > h2{
+			font-size: 50px;
 		}
 	}
+	& > p{
+		margin: 20px 0;
+		width: 100%;
+		text-align: center;
+	}
+	& > .download {
+		width: 400px;
+		@extend %d-flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		margin: 20px 0;
+
+		& > .buttons img{
+			margin: 10px;
+			width: 145px;
+			cursor: pointer;
+			transition: transform .3s $bezier, right .8s $bezier;
+	
+			&:hover{
+				transform: scale(1.05);
+			}
+		}
+	}
+}
+
+.text, .illustration{
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
 }

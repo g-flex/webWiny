@@ -1,8 +1,8 @@
 const $ = (selector) => document.querySelector(selector);
 
-let offset = 500;
+let offsetCosa = 500;
 let call;
-function scroll() {
+function scroll(offset) {
     if ((offset - document.documentElement.scrollTop) > 20) {
         document.documentElement.scrollTop += 20
     } else if ((offset - document.documentElement.scrollTop) < -20) {
@@ -12,12 +12,16 @@ function scroll() {
     }
 };
 
-$('#scopri-bando').addEventListener("click", reply_click);
+$('#scopri-bando').addEventListener("click", function(){reply_click(offsetCosa)});
+$('.current-page').addEventListener("click", function(){reply_click(0)});
 
-function reply_click() {
+function reply_click(offset) {
     event.preventDefault();
-    call = setInterval(scroll, 10);
+	call = setInterval(
+		function(){scroll(offset)}, 10
+	);
 }
+
 var isInViewport = function (elem) {
     var bounding = elem.getBoundingClientRect();
     return (

@@ -1,5 +1,27 @@
 const $ = (selector) => document.querySelector(selector);
 
+let offsetCosa = 750;
+let call;
+function scroll(offset) {
+    if ((offset - document.documentElement.scrollTop) > 20) {
+        document.documentElement.scrollTop += 20
+    } else if ((offset - document.documentElement.scrollTop) < -20) {
+        document.documentElement.scrollTop -= 20
+    } else {
+        clearInterval(call)
+    }
+};
+
+$('#cosa-e-winy').addEventListener("click", function(){reply_click(offsetCosa)});
+$('.current-page').addEventListener("click", function(){reply_click(0)});
+
+function reply_click(offset) {
+    event.preventDefault();
+	call = setInterval(
+		function(){scroll(offset)}, 10
+	);
+}
+
 var isInViewport = function (elem) {
     var bounding = elem.getBoundingClientRect();
     return (
@@ -7,22 +29,6 @@ var isInViewport = function (elem) {
         bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)
     );
 };
-let steps = document.querySelectorAll('.step');
-steps.forEach((step)=>{
-	window.addEventListener('scroll', function (event) {
-		if (isInViewport($('.step-1'))) {
-			step.querySelector('p').style.marginLeft='20px';
-			step.querySelector('img').style.marginLeft=0;
-		}
-	}, false);
-});
-
-window.addEventListener('scroll', function (event) {
-	if (isInViewport($('.step-1'))) {
-		$('.illustration img').style.transform='scale(1)';
-		$('.illustration p').style.right='50px';
-	}
-}, false);
 
 document.addEventListener("DOMContentLoaded", () => {
 	console.log('loaded');

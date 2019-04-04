@@ -1,4 +1,13 @@
-.footer .footer__bottom > .social, .footer > *, .bandi-passati > .vincitori > .vincitore, .bandi-passati > .vincitori, .download-buttons, .la-nostra-app > *, .cosa-e-winy > *, .nav__menu > ul, .nav > * {
+@font-face {
+  font-family: "F37 Ginger";
+  src: url("../fonts/F37Ginger-Light.otf");
+}
+@font-face {
+  font-family: "F37 Ginger";
+  font-weight: bold;
+  src: url("../fonts/F37Ginger_Regular.otf");
+}
+.footer .footer__bottom > .social, .footer > *, .bandi-passati > .vincitori > .vincitore, .bandi-passati > .vincitori, .cosa-e-winy > .download, .cosa-e-winy > .description, .nav__menu > ul, .nav > * {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -63,7 +72,7 @@
   flex-direction: row;
 }
 
-.bandi-passati, .la-nostra-app, .cosa-e-winy, .banner, section {
+.bandi-passati, .cosa-e-winy, .banner, section {
   width: 100vw;
   display: -webkit-flex;
   display: -moz-flex;
@@ -76,17 +85,12 @@
 }
 
 body {
-  font-family: sans-serif;
-  background-color: rgba(43, 1, 22, 0.5);
+  font-family: F37 Ginger, sans-serif;
+  font-size: 25px;
+  background-color: #fff;
   color: #000000;
   width: 100vw;
   overflow-x: hidden;
-}
-
-.text, .illustration {
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
 }
 
 .hoverable {
@@ -104,14 +108,26 @@ body {
 .hoverable:active {
   color: #8c1722;
 }
+.hoverable::selection {
+  background-color: transparent;
+}
 
 h2 {
+  font-size: 35px;
   color: #2b0116 !important;
 }
 
 .margin-opacity-out {
   margin-left: 3000px !important;
   opacity: 0 !important;
+}
+
+u.button-tick {
+  margin-left: 10px;
+  text-decoration: none;
+  position: absolute;
+  bottom: -1px;
+  font-size: 25px;
 }
 
 .nav {
@@ -153,6 +169,7 @@ h2 {
 .nav__menu > ul li > a {
   margin: auto 5px;
   cursor: pointer;
+  font-size: 20px;
   font-weight: 700;
   transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55), color 0s;
   will-change: letter-spacing, opacity;
@@ -195,113 +212,80 @@ h2 {
 .cosa-e-winy {
   background-color: #fff;
   justify-content: center;
-  text-align-last: left;
+  flex-direction: column;
 }
-.cosa-e-winy > * {
+.cosa-e-winy > .description {
   height: 100%;
   align-items: center;
+  flex-direction: row;
   color: #000000;
+  width: 83.3333333333vw;
 }
-.cosa-e-winy > .empty-col {
+.cosa-e-winy > .description > .empty-col {
   width: 8.3333333333vw;
 }
-.cosa-e-winy > .illustration {
+.cosa-e-winy > .description > .illustration {
   width: 25vw;
 }
-.cosa-e-winy > .text {
+.cosa-e-winy > .description > .text {
   width: 50vw;
-  padding: 20px 0;
+  padding: 20px 60px 20px 0;
+  text-align: left;
   align-items: flex-start;
 }
-.cosa-e-winy > .text > * {
+.cosa-e-winy > .description > .text > * {
   width: 100%;
-  font-size: 20px;
+  margin: 35px 0;
+  line-height: 30px;
+}
+.cosa-e-winy > .description > .text > h2 {
+  font-size: 50px;
+}
+.cosa-e-winy > p {
+  margin: 20px 0;
+  width: 100%;
+  text-align: center;
+}
+.cosa-e-winy > .download {
+  width: 400px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   margin: 20px 0;
 }
-
-.la-nostra-app {
-  justify-content: center;
-  margin-bottom: 0;
-  padding-bottom: 100px;
-  padding-top: 0;
-  background-color: rgba(43, 1, 22, 0.5);
-}
-.la-nostra-app > * {
-  height: 550px;
-  align-items: center;
-}
-.la-nostra-app > .illustration {
-  width: 58.3333333333vw;
-  padding-top: 45px;
-  position: relative;
-}
-.la-nostra-app > .illustration > img {
-  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s;
-  transform: scale(0);
-}
-.la-nostra-app > .illustration > p {
-  color: white;
-  font-weight: 700;
-  position: absolute;
-  bottom: 0;
-  right: -2000px;
-  transition: all 0.8s ease-in;
-  height: 150px;
-}
-.la-nostra-app > .text {
-  width: 25vw;
-  align-items: flex-start;
-  position: relative;
-  height: 550px;
-}
-.la-nostra-app > .text > .steps {
-  padding-top: 10px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-.la-nostra-app > .text > .steps > .step {
-  color: white;
-  font-weight: 700;
-  width: 100%;
-  height: 180px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  margin: 10px 0;
-  border-radius: 8px;
-  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-.la-nostra-app > .text > .steps > .step > img {
-  height: 150px;
-  transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  margin-left: -2500px;
-}
-.la-nostra-app > .text > .steps > .step > p {
-  margin-left: 5000px;
-  transition: all 0.8s ease-in;
-  min-width: 300px;
-}
-
-.download-buttons {
-  background-color: rgba(43, 1, 22, 0.5);
-  width: 100%;
-  height: 0;
-  margin: 0;
-  flex-direction: row;
-  justify-content: center;
-}
-.download-buttons > img {
+.cosa-e-winy > .download > .buttons img {
   margin: 10px;
-  margin-top: -80px;
-  height: 50px;
+  width: 145px;
   cursor: pointer;
   transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55), right 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
-.download-buttons > img:hover {
+.cosa-e-winy > .download > .buttons img:hover {
   transform: scale(1.05);
+}
+
+.text, .illustration {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.ultima-vincitrice {
+  position: relative;
+}
+.ultima-vincitrice > img {
+  width: 100vw;
+}
+.ultima-vincitrice > h2, .ultima-vincitrice span {
+  width: 100vw;
+  position: absolute;
+  text-align: center;
+  left: 0;
+}
+.ultima-vincitrice > h2 {
+  top: 100px;
+}
+.ultima-vincitrice > span {
+  bottom: 80px;
 }
 
 .bando-del-mese {
@@ -313,14 +297,19 @@ h2 {
   position: absolute;
   color: rgba(255, 255, 255, 0.6);
   top: calc(90vh - 80px);
-  padding: 20px;
+  padding: 20px 50px 20px 40px;
   background-color: #2b0116;
   z-index: 5;
   opacity: 1;
+  font-weight: normal;
   transform: translateY(-50%);
 }
 .bando-del-mese > span:hover {
   color: white;
+}
+.bando-del-mese > span > u {
+  right: 30px;
+  bottom: 18px;
 }
 .bando-del-mese > .big-img {
   height: calc(90vh - 80px);
@@ -346,6 +335,7 @@ h2 {
 .bando-del-mese > .info-bando-3 {
   border-bottom: 2px solid #8c1722;
   position: relative;
+  min-height: 200px !important;
 }
 .bando-del-mese > .info-bando-3 > span {
   text-align: center;
@@ -354,6 +344,14 @@ h2 {
   font-weight: 700;
   transform: translateX(50%);
   bottom: 50px;
+  padding: 15px;
+  padding-right: 20px;
+  width: 350px;
+  font-weight: normal;
+}
+.bando-del-mese > .info-bando-3 > span > u {
+  right: 50px;
+  bottom: 14px;
 }
 .bando-del-mese > .info-bando {
   padding: 20px 0;
@@ -422,6 +420,7 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: 1rem;
 }
 .footer > * {
   color: white;

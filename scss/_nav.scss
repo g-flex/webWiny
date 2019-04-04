@@ -34,6 +34,7 @@
 		& > a{
 			margin: auto 5px;
 			cursor: pointer;
+			font-size: 20px;
 			font-weight: 700;
 			transition: all .3s $bezier, color 0s;
 			will-change: letter-spacing, opacity;
