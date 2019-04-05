@@ -51,7 +51,8 @@
 
 		& > .buttons img{
 			margin: 10px;
-			width: 145px;
+			display: block;
+			width: 100px;
 			cursor: pointer;
 			transition: transform .3s $bezier, right .8s $bezier;
 	

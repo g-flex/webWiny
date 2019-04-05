@@ -92,7 +92,7 @@
 
 body {
   font-family: F37 Ginger, sans-serif;
-  font-size: 21px;
+  font-size: 18px;
   background-color: #fff;
   color: #000000;
   width: 100vw;
@@ -128,7 +128,7 @@ body p {
 }
 
 h2 {
-  font-size: 45px;
+  font-size: 36px;
   color: #2b0116 !important;
 }
 
@@ -142,7 +142,7 @@ u.button-tick {
   text-decoration: none;
   position: absolute;
   bottom: -1px;
-  font-size: 21px;
+  font-size: 18px;
 }
 
 .nav {
@@ -214,7 +214,7 @@ u.button-tick {
   z-index: 1;
   text-align: center;
   width: 100%;
-  top: 50px;
+  top: 70px;
   position: absolute;
 }
 .banner > video {
@@ -270,7 +270,8 @@ u.button-tick {
 }
 .cosa-e-winy > .download > .buttons img {
   margin: 10px;
-  width: 145px;
+  display: block;
+  width: 100px;
   cursor: pointer;
   transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55), right 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
@@ -303,7 +304,7 @@ u.button-tick {
   top: 100px;
 }
 .ultima-vincitrice > span {
-  bottom: 80px;
+  bottom: 100px;
 }
 
 .bando-del-mese {
@@ -395,6 +396,9 @@ u.button-tick {
   min-height: 100px;
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
+.bando-del-mese > .info-bando > p {
+  font-size: 18px;
+}
 .bando-del-mese > .info-bando > p > b {
   color: #8c1722;
 }
@@ -422,7 +426,7 @@ section.chi-sei > *:not(.divider) {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  width: 41.6666666667vw;
+  width: 50vw;
 }
 section.chi-sei > .divider {
   height: 480px;
@@ -479,6 +483,14 @@ section.chi-sei > .divider {
 .team {
   flex-direction: column;
   align-items: center;
+  position: relative;
+}
+.team > h2 {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  top: 70px;
 }
 .team > .row {
   align-items: center;
@@ -487,6 +499,9 @@ section.chi-sei > .divider {
   padding: 20px 0;
   margin: 20px 0;
   width: 100vw;
+}
+.team > .row:nth-of-type(1) {
+  margin-top: 100px;
 }
 .team > .row > * {
   width: 25vw;

@@ -95,6 +95,10 @@
 		min-height: 100px;
 		transition: all .5s $bezier;
 
+		& > p{
+			font-size: 18px;
+		}
+
 		& > p > b{
 			color: $red;
 		}
