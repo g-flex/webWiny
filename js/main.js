@@ -38,3 +38,26 @@ document.addEventListener("DOMContentLoaded", () => {
 $('.ultima-vincitrice > span').addEventListener('click', function(){
     window.location.replace('etichette.html');
 });
+
+$('.creativo > span:nth-of-type(1)').addEventListener('click', function(){
+    $('.overlay').classList.remove('not-popped');
+    console.log('clicked');
+});
+$('.creativo > span:nth-of-type(2)').addEventListener('click', function(){
+    $('.overlay').classList.remove('not-popped');
+    console.log('clicked');
+});
+$('.produttore > span:nth-of-type(1)').addEventListener('click', function(){
+    $('.overlay').classList.remove('not-popped');
+    console.log('clicked');
+});
+$('.produttore > span:nth-of-type(2)').addEventListener('click', function(){
+    $('.overlay').classList.remove('not-popped');
+    console.log('clicked');
+});
+
+$('.popup img').addEventListener('click', function(){
+    $('.overlay').classList.add('not-popped');
+    console.log('clicked');
+});
+
