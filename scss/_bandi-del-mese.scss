@@ -52,13 +52,14 @@
 			color: $bordeaux;
 			font-size: 40px;
 			font-weight: 700;
-			margin-bottom: 20px;
+			margin-bottom: 40px;
 		}
 	}
 
 	& > .info-bando-3{
 		position: relative;
 		min-height: 200px !important;
+		margin-bottom: 60px !important;
 
 		& > span{
 			@extend %button;
@@ -67,7 +68,7 @@
 			right: cols(5);
 			font-weight: 700;
 			transform: translateX(50%);
-			bottom: 50px;
+			bottom: 30px;
 			padding: 15px;
 			padding-right: 20px;
 			width: 300px;
@@ -100,9 +101,11 @@
 		}
 
 		& > p > b{
+			color: black;
+		}
+		& .data{
 			color: $red;
 		}
-
 		& > h4 {
 			font-size: 25px;
 			color: $bordeaux;

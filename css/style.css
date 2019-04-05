@@ -360,11 +360,12 @@ u.button-tick {
   color: #2b0116;
   font-size: 40px;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 .bando-del-mese > .info-bando-3 {
   position: relative;
   min-height: 200px !important;
+  margin-bottom: 60px !important;
 }
 .bando-del-mese > .info-bando-3 > span {
   text-align: center;
@@ -372,7 +373,7 @@ u.button-tick {
   right: 41.6666666667vw;
   font-weight: 700;
   transform: translateX(50%);
-  bottom: 50px;
+  bottom: 30px;
   padding: 15px;
   padding-right: 20px;
   width: 300px;
@@ -400,6 +401,9 @@ u.button-tick {
   font-size: 18px;
 }
 .bando-del-mese > .info-bando > p > b {
+  color: black;
+}
+.bando-del-mese > .info-bando .data {
   color: #8c1722;
 }
 .bando-del-mese > .info-bando > h4 {
@@ -437,6 +441,11 @@ section.chi-sei > .divider {
 .etichette-vincitrici {
   flex-direction: column;
   align-items: center;
+  margin-bottom: 50px;
+}
+.etichette-vincitrici > h2 {
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 .etichette-vincitrici > .row {
   align-items: center;
@@ -478,6 +487,33 @@ section.chi-sei > .divider {
 }
 .etichette-vincitrici > .row > * > .details > p > b {
   font-size: 21px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
 }
 
 .team {
