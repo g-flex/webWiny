@@ -41,7 +41,7 @@
   overflow: hidden !important;
 }
 
-.bando-del-mese > .info-bando-3 > span {
+.banner > h2, .bando-del-mese > .info-bando-3 > span, .no-selectable {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -216,6 +216,7 @@ u.button-tick {
   width: 100%;
   top: 70px;
   position: absolute;
+  color: white !important;
 }
 .banner > video {
   position: absolute;

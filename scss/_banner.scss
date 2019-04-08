@@ -11,6 +11,8 @@
 		width: 100%;
 		top: 70px;
 		position: absolute;
+		@extend %no-selectable;
+		color: white !important;
 	}
 
 	& > video{

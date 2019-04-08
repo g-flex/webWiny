@@ -59,6 +59,9 @@ $bezier: cubic-bezier(0.680, -0.550, 0.265, 1.550);
 	-ms-user-select: none;
 	user-select: none;
 }
+.no-selectable{
+	@extend %no-selectable;
+}
 
 %button{
 	@extend %no-selectable;
