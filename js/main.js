@@ -31,8 +31,11 @@ var isInViewport = function (elem) {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-	console.log('loaded');
-	$('#banner').play();
+    //console.log('loaded');
+    setTimeout(function(){
+        $('.loading-img').classList.add('d-none');
+        $('#banner').play();
+    }, 3500);
 });
 
 $('.ultima-vincitrice > span').addEventListener('click', function(){

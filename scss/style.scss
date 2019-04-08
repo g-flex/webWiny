@@ -162,6 +162,19 @@ u.button-tick{
 	font-size: 18px;
 }
 
+.loading-img{
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #fff;
+	@extend %d-flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	width: 100vw;
+	z-index: 10;
+}
+
 @import 'nav';
 @import 'banner';
 @import 'cosa-e-winy';
