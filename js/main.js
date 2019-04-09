@@ -33,8 +33,14 @@ var isInViewport = function (elem) {
 document.addEventListener("DOMContentLoaded", () => {
     //console.log('loaded');
     setTimeout(function(){
-        $('.loading-img').classList.add('d-none');
-        $('#banner').play();
+        $('#banner').oncanplay = function() {
+            $('#banner').play();
+            $('#banner').oncanplaythrough = function() {
+                $('#banner').currentTime = 0;
+                $('#banner').play();
+                $('.loading-img').classList.add('d-none');
+            };
+        };
     }, 3500);
 });
 
