@@ -1,6 +1,6 @@
 const $ = (selector) => document.querySelector(selector);
 
-let offsetCosa = 700;
+let offsetCosa = 750;
 let call;
 function scroll(offset) {
     if ((offset - document.documentElement.scrollTop) > 20) {

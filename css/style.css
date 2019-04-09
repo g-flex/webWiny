@@ -41,7 +41,7 @@
   overflow: hidden !important;
 }
 
-.banner > h2, .bando-del-mese > .info-bando-3 > span, .no-selectable {
+.banner > h2, .popup .button, .bando-del-mese > .info-bando-3 > span, .no-selectable {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -50,7 +50,7 @@
   user-select: none;
 }
 
-.bando-del-mese > .info-bando-3 > span {
+.popup .button, .bando-del-mese > .info-bando-3 > span {
   min-width: 80px;
   background-color: #2b0116;
   padding: 10px;
@@ -60,11 +60,11 @@
   transition: all 0.1s ease-out;
   color: white;
 }
-.bando-del-mese > .info-bando-3 > span:hover {
+.popup .button:hover, .bando-del-mese > .info-bando-3 > span:hover {
   cursor: pointer;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.4), 0 2px 1px -1px rgba(0, 0, 0, 0.4), 0 1px 2px 0 black;
 }
-.bando-del-mese > .info-bando-3 > span:active {
+.popup .button:active, .bando-del-mese > .info-bando-3 > span:active {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 4px 2px -1px rgba(0, 0, 0, 0.12), 0 4px 2px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -373,6 +373,7 @@ u.button-tick {
   color: #2b0116;
   font-size: 40px;
   font-weight: 700;
+  padding-top: 50px;
   margin-bottom: 40px;
 }
 .bando-del-mese > .info-bando-3 {
@@ -530,10 +531,83 @@ section.chi-sei > .divider {
   position: relative;
   transition: all 5s ease-in-out;
 }
+.popup h4 {
+  text-align: center;
+}
 .popup > img {
   cursor: pointer;
   float: right;
   margin-top: -30px;
+}
+.popup label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+  opacity: 0.6;
+}
+.popup input {
+  font-size: 1rem;
+  width: 100%;
+  border: none;
+  color: #2d2d2d;
+  border-bottom: 1px solid rgba(45, 45, 45, 0.3);
+}
+.popup .button {
+  width: 100px;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.form-row {
+  position: relative;
+  padding: 10px;
+}
+.form-row:nth-of-type(1) {
+  margin-top: 15px;
+}
+.form-row:nth-last-of-type(1) {
+  margin-bottom: 15px;
+}
+
+.form-row::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0%;
+  background: #8c1722;
+  transition: all 300ms;
+  margin-left: 50%;
+  margin-top: -3px;
+}
+
+.form-row:focus-within::after {
+  width: 100%;
+  margin-left: 0;
+}
+
+input::placeholder {
+  opacity: 0;
+}
+
+input:focus ~ label,
+input:not(:placeholder-shown) ~ label {
+  top: 0;
+  font-size: 0.5rem;
+  transform: translateY(0);
+  color: #8c1722;
+  opacity: 1;
+}
+
+input:focus::placeholder {
+  opacity: 1;
+  transition: opacity 300ms 150ms;
+}
+
+input:focus {
+  outline: 0;
+  border: none;
 }
 
 .team {
